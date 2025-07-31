@@ -1,7 +1,7 @@
 import {useState} from "react";
 import type {ChangeEvent, FormEvent} from "react";
 
-export const AddCategory = ({setCategories}: AddCategoryProps) => {
+export const InputSearchCategory = ({setCategories}: AddCategoryProps) => {
     const [inputValue, setInputValue] = useState("");
 
     const onChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
