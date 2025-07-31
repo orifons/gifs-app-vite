@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {AddCategory} from "./components/AddCategory";
+import {InputSearchCategory} from "./components/AddCategory";
 import {GifGrid} from "./components/GifGrid";
 
 export const GifApp = () => {
@@ -8,14 +8,14 @@ export const GifApp = () => {
     return (
         <>
             <div className="header-container">
-                <h2 className="text-title">Gif Expert App</h2>
-                <AddCategory setCategories={setCategory}/>
+                <h2 className="text-title">Gif App</h2>
+                <InputSearchCategory setCategories={setCategory}/>
             </div>
 
             <div className="content-container">
                 <ol>
-                    {category.map((category: string) => (
-                        <GifGrid key={category} category={category}/>
+                    {category.map((category: string, index) => (
+                        <GifGrid key={`${category}${index}`} category={category}/>
                     ))}
                 </ol>
             </div>
