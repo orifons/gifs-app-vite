@@ -14,8 +14,8 @@ export const GifApp = () => {
 
             <div className="content-container">
                 <ol>
-                    {category.map((category: string, index) => (
-                        <GifGrid key={`${category}${index}`} category={category}/>
+                    {category.map((category: string) => (
+                        <GifGrid key={category} category={category}/>
                     ))}
                 </ol>
             </div>
